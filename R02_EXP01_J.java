@@ -11,11 +11,12 @@ public class R02_EXP01_J {
 		System.out.println(counter(array[1], iterator));
 	}
 	
+	// Implement null checks on the object being counted
 	public static int counter(Integer obj, Iterator it){
 		int count = 0;
 		while(it.hasNext()){
 			Object check = it.next();
-			if ((null == obj && null == check)|| (obj.equals(check)))
+			if ((null == obj && null == check)|| (obj.equals(check) && obj.equals(check)))
 			{
 				count++;
 			}
