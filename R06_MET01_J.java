@@ -14,7 +14,9 @@ public class R06_MET01_J{
 		assert y != Integer.MIN_VALUE;
 		int absX = Math.abs(x);
 		int absY = Math.abs(y);
-		assert (absX <= Integer.MAX_VALUE - absY);
+		if (absX > Integer.MAX_VALUE - absY){
+			throw new IllegalArgumentException();
+		}
 		return absX + absY;
 	}
 }
